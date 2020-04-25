@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-/*void main() => runApp(MaterialApp(
-      home: MyApp(),
-      theme: ThemeData(
-        canvasColor: Colors.blueGrey,
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        accentColor: Colors.pinkAccent,
-        brightness: Brightness.dark,
-      ),
-    ));
-*/
+
 class MyApp10 extends StatefulWidget {
   @override
   MyAppState10 createState() => MyAppState10();
@@ -33,10 +22,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
             
           },
           ),
-          /*FlatButton(child: Text("No"),
-          onPressed: () {
-            return ;
-          },)*/
+          
         ],
       );
       });
