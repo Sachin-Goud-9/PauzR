@@ -2,18 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:date_time/main.dart' as first;
 
-/*void main() => runApp(MaterialApp(
-      home: MyApp(),
-      theme: ThemeData(
-        canvasColor: Colors.blueGrey,
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        accentColor: Colors.pinkAccent,
-        brightness: Brightness.dark,
-      ),
-    ));
-*/
+
 class MyApp10 extends StatefulWidget {
   @override
   MyAppState10 createState() => MyAppState10();
@@ -34,10 +23,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
             
           },
           ),
-          /*FlatButton(child: Text("No"),
-          onPressed: () {
-            return ;
-          },)*/
+          
         ],
       );
       });
@@ -83,13 +69,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       duration: Duration(minutes:20,seconds: 00),
     );
 
-    // ..addStatusListener((status) {
-    //     if (controller.status == AnimationStatus.dismissed) {
-    //       setState(() => isPlaying = false);
-    //     }
-
-    //     print(status);
-    //   })
+    
   }
 
   @override
@@ -134,12 +114,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                             AnimatedBuilder(
                                 animation: controller,
                                 builder: (BuildContext context, Widget child) {
-                                  //if(controller.isAnimating==false)
-                                  //{
-                      
-                                      //showCompleted(context);
-
-                                  //}
+                                  
                                   return Text(
                                     timerString,
                                     style: themeData.textTheme.display4,
@@ -167,9 +142,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                             ? Icons.timer
                             : Icons.play_arrow);
                       
-                        //|| Icon(isPlaying
-                         //? Icons.pause
-                         //: Icons.play_arrow);
+                        
                       },
                     ),
                     onPressed: () {
