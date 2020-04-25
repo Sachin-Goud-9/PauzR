@@ -15,7 +15,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("You have Earned 10 points."),
-        //content: Text("Are you sure you want to pause?"),
         actions: <Widget>[
           FlatButton(child: Text("Confirm"),
           onPressed: () {
@@ -33,7 +32,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
     return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("Are you sure you want to pause?"),
-        //content: Text("Are you sure you want to pause?"),
+       
         actions: <Widget>[
           FlatButton(child: Text("Yes"),
           onPressed: () {
@@ -70,13 +69,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       duration: Duration(minutes:00,seconds: 10),
     );
 
-    // ..addStatusListener((status) {
-    //     if (controller.status == AnimationStatus.dismissed) {
-    //       setState(() => isPlaying = false);
-    //     }
 
-    //     print(status);
-    //   })
   }
 
   @override
@@ -122,14 +115,7 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                             AnimatedBuilder(
                                 animation: controller,
                                 builder: (BuildContext context, Widget child) {
-                                  //if(controller.isAnimating==false)
-                                  //{
-                      
-                                    //  showCompleted(context);
-
-                                  //}
-                                  //if(controller.isCompleted==true) 
-                                          //showCompleted(context);
+                                  
                                   return Text(
                                     timerString,
                                     style: themeData.textTheme.display4,
@@ -157,13 +143,10 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                             ? Icons.timer
                             : Icons.play_arrow);
                       
-                        //|| Icon(isPlaying
-                         //? Icons.pause
-                         //: Icons.play_arrow);
+                        
                       },
                     ),
                     onPressed: () {
-                       //setState(() => isPlaying = !isPlaying);
 
                       if (controller.isAnimating) {
                         createAlertDialog(context);
@@ -223,8 +206,6 @@ class TimerPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(TimerPainter old) {
-    //if(animation.value==old.animation.value)
-      //showCompleted(context);
     return animation.value != old.animation.value ||
         color != old.color ||
         backgroundColor != old.backgroundColor;
