@@ -16,7 +16,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("You have Earned 10 points."),
-        //content: Text("Are you sure you want to pause?"),
         actions: <Widget>[
           FlatButton(child: Text("Confirm"),
           onPressed: () {
@@ -34,7 +33,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
     return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("Are you sure you want to pause?"),
-        //content: Text("Are you sure you want to pause?"),
         actions: <Widget>[
           FlatButton(child: Text("Yes"),
           onPressed: () {
@@ -146,7 +144,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                       },
                     ),
                     onPressed: () {
-                      // setState(() => isPlaying = !isPlaying);
 
                       if (controller.isAnimating) {
                         createAlertDialog(context);
