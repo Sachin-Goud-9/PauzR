@@ -2,18 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:date_time/main.dart' as first;
 
-/*void main() => runApp(MaterialApp(
-      home: MyApp(),
-      theme: ThemeData(
-        canvasColor: Colors.blueGrey,
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        accentColor: Colors.pinkAccent,
-        brightness: Brightness.dark,
-      ),
-    ));
-*/
+
 class MyApp10 extends StatefulWidget {
   @override
   MyAppState10 createState() => MyAppState10();
@@ -27,17 +16,12 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("You have Earned 10 points."),
-        //content: Text("Are you sure you want to pause?"),
         actions: <Widget>[
           FlatButton(child: Text("Confirm"),
           onPressed: () {
             
           },
           ),
-          /*FlatButton(child: Text("No"),
-          onPressed: () {
-            return ;
-          },)*/
         ],
       );
       });
@@ -48,7 +32,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
     return showDialog(context: context,builder: (context){
       return AlertDialog(
         title: Text("Are you sure you want to pause?"),
-        //content: Text("Are you sure you want to pause?"),
         actions: <Widget>[
           FlatButton(child: Text("Yes"),
           onPressed: () {
@@ -68,7 +51,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
 
   AnimationController controller;
 
-  // bool isPlaying = false;
 
   String get timerString {
     Duration duration = controller.duration * controller.value;
@@ -82,14 +64,6 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
       vsync: this,
       duration: Duration(minutes:30,seconds: 00),
     );
-
-    // ..addStatusListener((status) {
-    //     if (controller.status == AnimationStatus.dismissed) {
-    //       setState(() => isPlaying = false);
-    //     }
-
-    //     print(status);
-    //   })
   }
 
   @override
@@ -167,13 +141,9 @@ class MyAppState10 extends State<MyApp10> with TickerProviderStateMixin {
                             ? Icons.timer
                             : Icons.play_arrow);
                       
-                        //|| Icon(isPlaying
-                         //? Icons.pause
-                         //: Icons.play_arrow);
                       },
                     ),
                     onPressed: () {
-                      // setState(() => isPlaying = !isPlaying);
 
                       if (controller.isAnimating) {
                         createAlertDialog(context);
